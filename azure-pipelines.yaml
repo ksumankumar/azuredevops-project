@@ -1,0 +1,15 @@
+---
+trigger: 
+- master
+stages:
+  - stage: azdocker
+    pool: Docker
+    jobs:
+      - job: azdocker
+        steps:
+          - script: docker info
+      - job: spring-pet
+        steps:
+          - script: docker image build -t spc:1.0 .
+
+
