@@ -8,7 +8,7 @@ stages:
       - job: azdocker
         steps:
           - script: docker info
-      - job: spring-pet
+      - job: springpet
         steps:
           - script: docker image build -t spc:1.0 .
 
